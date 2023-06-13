@@ -29,7 +29,7 @@ class SpaceShip(Sprite):
             self.rect.x += 10
     def move_up(self):
         if self.rect.y > SCREEN_HEIGHT //2:
-           self.rect -= 10
+           self.rect.x -= 10
     def move_dowm(self):
         if self.rect.y < SCREEN_HEIGHT-50:
             self.rect.y += 10  
