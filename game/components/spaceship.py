@@ -21,19 +21,22 @@ class SpaceShip(Sprite):
              self.move_up()
      elif user_input[pygame.K_DOWN]:
              self.move_dowm()
-                     
+   
+   #Izquierda                  
     def move_left(self):
          if self.rect.left > 0:
              self.rect.x -= 10
         #le añadi una nueva secuencia
          elif self.rect.left <= 0:
                self.rect.x = SCREEN_WIDTH
+               
     def move_right(self):
         if self.rect.right < SCREEN_WIDTH:
             self.rect.x += 10
             #le añadi una nueva secuencia
         elif self.rect.right >= SCREEN_WIDTH:
              self.rect.x = 0
+             
     def move_up(self):
         if self.rect.y > SCREEN_HEIGHT //2:
            self.rect.x -= 10
