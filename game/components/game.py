@@ -20,7 +20,6 @@ class Game:
         self.player = SpaceShip()
         self.enemy_manager = EnemyManager()
         
-
     def run(self):
         # Game loop: events - update - draw
         self.playing = True
@@ -40,7 +39,7 @@ class Game:
         user_input = pygame.key.get_pressed()
         self.player.update(user_input)
         self.enemy_manager.update()
-        
+      
 
     def draw(self):
         self.clock.tick(FPS)
