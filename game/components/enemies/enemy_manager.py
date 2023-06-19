@@ -1,5 +1,6 @@
 
-from game.components.enemies.enemy import  Enemy, Enemy_2,Enemy_3
+
+from game.components.enemies.enemy import Enemy,Enemy_2, Enemy_3
 from game.utils.constants import  SCREEN_HEIGHT
 
 
@@ -8,7 +9,7 @@ class EnemyManager:
         self.enemies: list[Enemy] =[]
     
     
-    def update(self):
+    def update(self, game):
         if not self.enemies: #cosas vacias seran falsas # []{} 0 "" y de lo contratri sera verdadero 
             self.enemies.append(Enemy())
             self.enemies.append(Enemy_2())
@@ -16,7 +17,7 @@ class EnemyManager:
             
         
         for enemy in self.enemies:
-            enemy.update(self.enemies)
+            enemy.update(self.enemies, game)
     
     def draw(self, screen):
         for enemy in self.enemies:
